@@ -33,8 +33,8 @@ def burn(target_drive):
     print("sudo dd if=" + os.getcwd() + "/Fedora-Workstation-Live-x86_64-31-1.9.iso" + " of=/dev/" + target_drive + " bs=4M") 
 
 def main():
-    #download_iso()
-    #verify_checksum()
+    download_iso()
+    verify_checksum()
     target_drive = choose_drive()
     if confirm(target_drive) == -1:
         print("Cancelled.")
